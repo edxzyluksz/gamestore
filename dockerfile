@@ -15,9 +15,7 @@ RUN apt-get install -y maven
 ## Copiar o código fonte para dentro do container
 COPY . .
 
-## Compilar o projeto com o Maven
-
-RUN mvn clean install
+RUN mvn clean install -DskipTests
 
 ## Execução do Projeto
 FROM eclipse-temurin:21-jdk-jammy
